@@ -14,6 +14,12 @@ Route::get('/success-stories', function () {
 Route::get('/services', function () {
     return Inertia::render('Services');
 })->name('services');
+Route::get('/about', function () {
+    return Inertia::render('About');
+})->name('about');
+Route::get('/contact', function () {
+    return Inertia::render('Contact');
+})->name('contact');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {

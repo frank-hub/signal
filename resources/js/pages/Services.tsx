@@ -68,8 +68,8 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
             {/* Logo */}
             <div className="flex items-center">
               <a href="/" className="text-2xl font-bold">
-                <span className="text-gray-900">Eryx</span>
-                <span className="text-blue-600">Labs</span>
+                <span className="text-gray-900">Signal</span>
+                <span className="text-blue-600">Sphere</span>
               </a>
             </div>
 
@@ -278,8 +278,8 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
             <div className="lg:col-span-1">
               <div className="mb-6">
                 <h3 className="text-2xl font-bold">
-                  <span className="text-gray-900">Eryx</span>
-                  <span className="text-blue-600">Labs</span>
+                  <span className="text-gray-900">Signal</span>
+                  <span className="text-blue-600">Sphere</span>
                 </h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
@@ -350,10 +350,10 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
                   <p>Kiambere Rd, Upper Hill, Nairobi</p>
                 </div>
                 <div>
-                  <p><span className="font-medium">Phone:</span> +254 743 169 096</p>
+                  <p><span className="font-medium">Phone:</span> +254717353774</p>
                 </div>
                 <div>
-                  <p><span className="font-medium">Email:</span> info@eryxlabs.co.ke</p>
+                  <p><span className="font-medium">Email:</span> info@signalsphere.co.ke</p>
                 </div>
               </div>
             </div>
@@ -362,7 +362,7 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
           {/* Footer Bottom */}
           <div className="border-t border-gray-200 mt-12 pt-8 text-center">
             <p className="text-gray-600">
-              © 2024 EryxLabs. All rights reserved.
+              © 2025 SignalSphere. All rights reserved.
             </p>
           </div>
         </div>

@@ -88,7 +88,7 @@ const HomePage: React.FC<HomePageProps> = ({
 
           {/* Call to Action Buttons */}
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center max-w-md mx-auto">
-            <button className="w-full sm:w-auto bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all duration-200 font-medium text-sm flex items-center justify-center group">
+            <a href='/contact' className="w-full sm:w-auto bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all duration-200 font-medium text-sm flex items-center justify-center group">
               Consult Us
               <svg
                 className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200"
@@ -98,11 +98,11 @@ const HomePage: React.FC<HomePageProps> = ({
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </button>
+            </a>
 
-            <button className="w-full sm:w-auto bg-white text-gray-700 px-8 py-4 rounded-lg border border-gray-300 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 font-medium text-sm">
+            <a href='/success-stories' className="w-full sm:w-auto bg-white text-gray-700 px-8 py-4 rounded-lg border border-gray-300 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 font-medium text-sm">
               Explore Success Stories
-            </button>
+            </a>
           </div>
         </div>
 
@@ -250,6 +250,17 @@ const HomePage: React.FC<HomePageProps> = ({
                 robust eTIMS compliance solutions.
               </p>
             </div>
+          </div>
+                    <div className="text-center">
+            <a
+              href="/services"
+              className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-lg transition-colors duration-200"
+            >
+              View all Services
+              <svg className="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
@@ -500,7 +511,7 @@ const HomePage: React.FC<HomePageProps> = ({
             Ready to Transform Your Business?
           </h2>
           <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
-            Let's discuss how Eryx Labs' tailored ERP, custom software, and AI solutions can help
+            Let's discuss how Signal Sphere's tailored ERP, custom software, and AI solutions can help
             you achieve operational excellence and sustainable growth.
           </p>
           <a
@@ -528,8 +539,8 @@ const HomePage: React.FC<HomePageProps> = ({
             <div className="lg:col-span-1">
               <div className="mb-6">
                 <h3 className="text-2xl font-bold">
-                  <span className="text-gray-900">Eryx</span>
-                  <span className="text-blue-600">Labs</span>
+                  <span className="text-gray-900">Signal</span>
+                  <span className="text-blue-600">Sphere</span>
                 </h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
@@ -542,12 +553,12 @@ const HomePage: React.FC<HomePageProps> = ({
               <h4 className="text-lg font-bold text-gray-900 mb-4">QUICK LINKS</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="#services" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/services" className="text-blue-600 font-medium">
                     Services
                   </a>
                 </li>
                 <li>
-                  <a href="#why-us" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/why-us" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
                     Why Choose Us
                   </a>
                 </li>
@@ -561,51 +572,59 @@ const HomePage: React.FC<HomePageProps> = ({
                     About Us
                   </a>
                 </li>
-                <li>
-                  <a href="/contact" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
-                    Contact
-                  </a>
-                </li>
               </ul>
             </div>
 
-            {/* Services */}
+            {/* Core Services */}
             <div>
-              <h4 className="text-lg font-bold text-gray-900 mb-4">SERVICES</h4>
+              <h4 className="text-lg font-bold text-gray-900 mb-4">CORE SERVICES</h4>
               <ul className="space-y-3">
                 <li>
                   <a href="/services/dynamics-365" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
-                    Microsoft Dynamics 365
+                    Dynamics 365 ERP
                   </a>
                 </li>
                 <li>
                   <a href="/services/custom-development" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
-                    Custom Software Development
+                    Custom Development
                   </a>
                 </li>
                 <li>
-                  <a href="/services/ai-solutions" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
-                    AI & Data Intelligence
+                  <a href="/services/ai-intelligence" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                    AI & Business Intelligence
                   </a>
                 </li>
                 <li>
-                  <a href="/services/financial-compliance" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
-                    Financial Systems & Compliance
+                  <a href="/services/etims-integration" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                    eTIMS Integration
                   </a>
                 </li>
               </ul>
             </div>
 
-            {/* Contact Info */}
+            {/* Contact Us */}
             <div>
               <h4 className="text-lg font-bold text-gray-900 mb-4">CONTACT US</h4>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                123 Tech Avenue, Nairobi, Kenya
-              </p>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Email: <a href="mailto:info@eryxlabs.com" className="text-blue-600 hover:underline">info@eryxlabs.com</a>
-              </p>
+              <div className="space-y-3 text-gray-600">
+                <div>
+                  <p>Nachu Plaza, 10th Floor</p>
+                  <p>Kiambere Rd, Upper Hill, Nairobi</p>
+                </div>
+                <div>
+                  <p><span className="font-medium">Phone:</span> +254717353774</p>
+                </div>
+                <div>
+                  <p><span className="font-medium">Email:</span> info@signalsphere.co.ke</p>
+                </div>
+              </div>
             </div>
+          </div>
+
+          {/* Footer Bottom */}
+          <div className="border-t border-gray-200 mt-12 pt-8 text-center">
+            <p className="text-gray-600">
+              © 2025 SignalSphere. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
