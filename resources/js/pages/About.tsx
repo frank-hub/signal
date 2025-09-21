@@ -106,7 +106,7 @@ const AboutPage: React.FC<AboutPageProps> = ({
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               We're a team of passionate technologists dedicated to transforming businesses
-              through innovative ERP solutions and intelligent automation.
+              through innovative web development, AI solutions, and advanced data analytics.
             </p>
           </div>
 
@@ -120,16 +120,16 @@ const AboutPage: React.FC<AboutPageProps> = ({
                 <div className="space-y-4 text-gray-600 leading-relaxed">
                   <p>
                     Founded with a vision to bridge the gap between complex technology and practical business solutions,
-                    SignalSphere has been at the forefront of digital transformation in Kenya and beyond.
+                    SignalSphere has been at the forefront of digital innovation across the UK and internationally.
                   </p>
                   <p>
                     We understand that every business is unique, which is why we don't believe in one-size-fits-all
-                    solutions. Our approach combines deep technical expertise with genuine business understanding
+                    solutions. Our approach combines cutting-edge technology expertise with genuine business understanding
                     to deliver solutions that truly make a difference.
                   </p>
                   <p>
-                    From Microsoft Dynamics 365 implementations to custom AI-powered solutions, we've helped
-                    organizations streamline operations, ensure compliance, and unlock their full potential.
+                    From responsive web applications and mobile apps to AI-powered analytics and data science solutions,
+                    we've helped organizations streamline operations, gain valuable insights, and unlock their digital potential.
                   </p>
                 </div>
               </div>
@@ -167,8 +167,8 @@ const AboutPage: React.FC<AboutPageProps> = ({
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  To empower businesses with intelligent technology solutions that streamline operations,
-                  ensure compliance, and drive sustainable growth while fostering innovation in the local market.
+                  To empower businesses with intelligent technology solutions that enhance digital presence,
+                  unlock data insights, and drive sustainable growth through innovative web development and AI-powered analytics.
                 </p>
               </div>
 
@@ -181,8 +181,8 @@ const AboutPage: React.FC<AboutPageProps> = ({
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  To be the leading technology partner for businesses across Africa, known for delivering
-                  innovative solutions that transform operations and create lasting value for our clients.
+                  To be the leading technology partner for businesses across the UK and Europe, known for delivering
+                  innovative digital solutions that transform operations and create lasting competitive advantages.
                 </p>
               </div>
             </div>
@@ -208,8 +208,8 @@ const AboutPage: React.FC<AboutPageProps> = ({
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Excellence</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  We strive for excellence in every project, delivering solutions that exceed expectations
-                  and drive real business value.
+                  We strive for excellence in every project, delivering cutting-edge solutions that exceed expectations
+                  and drive measurable business value.
                 </p>
               </div>
 
@@ -219,10 +219,10 @@ const AboutPage: React.FC<AboutPageProps> = ({
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Partnership</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Collaboration</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  We build long-term partnerships with our clients, working as an extension of their team
-                  to achieve shared success.
+                  We build transparent partnerships with our clients, working collaboratively to understand your vision
+                  and deliver solutions that align with your goals.
                 </p>
               </div>
 
@@ -234,8 +234,8 @@ const AboutPage: React.FC<AboutPageProps> = ({
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  We embrace cutting-edge technologies and innovative approaches to solve complex
-                  business challenges effectively.
+                  We embrace emerging technologies including AI, machine learning, and modern development frameworks
+                  to solve complex challenges effectively.
                 </p>
               </div>
             </div>
@@ -248,7 +248,7 @@ const AboutPage: React.FC<AboutPageProps> = ({
                 Meet Our Team
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                The passionate experts behind SignalSphere's success, bringing together diverse skills
+                The passionate experts behind SignalSphere' success, bringing together diverse skills
                 and deep industry experience.
               </p>
             </div>
@@ -317,7 +317,7 @@ const AboutPage: React.FC<AboutPageProps> = ({
                 </h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Your Partner for Seamless ERP Solutions and Business Growth.
+                Your Partner for Modern Web Solutions and Data-Driven Growth.
               </p>
             </div>
 
@@ -353,8 +353,8 @@ const AboutPage: React.FC<AboutPageProps> = ({
               <h4 className="text-lg font-bold text-gray-900 mb-4">CORE SERVICES</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="/services/dynamics-365" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
-                    Dynamics 365 ERP
+                  <a href="/services/web-development" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                    Web & App Development
                   </a>
                 </li>
                 <li>
@@ -364,12 +364,12 @@ const AboutPage: React.FC<AboutPageProps> = ({
                 </li>
                 <li>
                   <a href="/services/ai-intelligence" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
-                    AI & Business Intelligence
+                    AI & Data Intelligence
                   </a>
                 </li>
                 <li>
-                  <a href="/services/etims-integration" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
-                    eTIMS Integration
+                  <a href="/services/data-science" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                    Data Science & Analytics
                   </a>
                 </li>
               </ul>
@@ -380,14 +380,14 @@ const AboutPage: React.FC<AboutPageProps> = ({
               <h4 className="text-lg font-bold text-gray-900 mb-4">CONTACT US</h4>
               <div className="space-y-3 text-gray-600">
                 <div>
-                  <p>Nachu Plaza, 10th Floor</p>
-                  <p>Kiambere Rd, Upper Hill, Nairobi</p>
+                  <p>PL4 8ND</p>
+                  <p>Nelson Street, Plymouth, UK</p>
                 </div>
                 <div>
-                  <p><span className="font-medium">Phone:</span> +254717353774</p>
+                  <p><span className="font-medium">Phone:</span> +44 739 4132 747</p>
                 </div>
                 <div>
-                  <p><span className="font-medium">Email:</span> info@signalsphere.co.ke</p>
+                  <p><span className="font-medium">Email:</span> info@signalsphere.co.uk</p>
                 </div>
               </div>
             </div>
@@ -396,7 +396,7 @@ const AboutPage: React.FC<AboutPageProps> = ({
           {/* Footer Bottom */}
           <div className="border-t border-gray-200 mt-12 pt-8 text-center">
             <p className="text-gray-600">
-              © 2024 SignalSphere. All rights reserved.
+              © 2025 Signal Sphere. All rights reserved.
             </p>
           </div>
         </div>

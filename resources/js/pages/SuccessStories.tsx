@@ -269,7 +269,7 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
                 </h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Your Partner for Seamless ERP Solutions and Business Growth.
+                Your Partner for Modern Web Solutions and Data-Driven Growth.
               </p>
             </div>
 
@@ -278,7 +278,7 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
               <h4 className="text-lg font-bold text-gray-900 mb-4">QUICK LINKS</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="/services" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/services" className="text-blue-600 font-medium">
                     Services
                   </a>
                 </li>
@@ -288,7 +288,7 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
                   </a>
                 </li>
                 <li>
-                  <a href="/case-studies" className="text-blue-600 font-medium">
+                  <a href="/case-studies" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
                     Case Studies
                   </a>
                 </li>
@@ -306,7 +306,7 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
               <ul className="space-y-3">
                 <li>
                   <a href="/services/dynamics-365" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
-                    Dynamics 365 ERP
+                    Website & Mobile App Development
                   </a>
                 </li>
                 <li>
@@ -319,11 +319,7 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
                     AI & Business Intelligence
                   </a>
                 </li>
-                <li>
-                  <a href="/services/etims-integration" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
-                    eTIMS Integration
-                  </a>
-                </li>
+
               </ul>
             </div>
 
@@ -332,11 +328,11 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
               <h4 className="text-lg font-bold text-gray-900 mb-4">CONTACT US</h4>
               <div className="space-y-3 text-gray-600">
                 <div>
-                  <p>Nachu Plaza, 10th Floor</p>
-                  <p>Kiambere Rd, Upper Hill, Nairobi</p>
+                  <p>PL4 8ND</p>
+                  <p>Nelson Street, Plymouth, UK</p>
                 </div>
                 <div>
-                  <p><span className="font-medium">Phone:</span> +254717353774</p>
+                  <p><span className="font-medium">Phone:</span> +44 739 4132 747</p>
                 </div>
                 <div>
                   <p><span className="font-medium">Email:</span> info@signalsphere.co.ke</p>

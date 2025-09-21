@@ -35,24 +35,48 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
   serviceCategories = [
     {
       id: '1',
-      title: 'Enterprise Solutions',
-      illustration: 'Illustration for Enterprise Solutions',
+      title: 'Website & App Development',
+      illustration: 'Illustration for Website & App Development',
       items: [
-        { id: '1-1', title: 'Microsoft Dynamics 365' },
-        { id: '1-2', title: 'Custom ERP Development' },
-        { id: '1-3', title: 'Legacy System Migration' }
+        { id: '1-1', title: 'Responsive Web Applications' },
+        { id: '1-2', title: 'Mobile App Development' },
+        { id: '1-3', title: 'E-commerce Solutions' }
       ],
       buttonText: 'Get Started',
       buttonLink: '/contact'
     },
     {
       id: '2',
-      title: 'Financial Technology',
-      illustration: 'Illustration for Financial Technology',
+      title: 'Custom Development & Integration',
+      illustration: 'Illustration for Custom Development',
       items: [
-        { id: '2-1', title: 'eTIMS Integration' },
-        { id: '2-2', title: 'Invoice Automation' },
-        { id: '2-3', title: 'Financial Systems Audit' }
+        { id: '2-1', title: 'API Development & Integration' },
+        { id: '2-2', title: 'System Analysis & Architecture' },
+        { id: '2-3', title: 'ETL Integrations' }
+      ],
+      buttonText: 'Get Started',
+      buttonLink: '/contact'
+    },
+    {
+      id: '3',
+      title: 'AI & Data Intelligence',
+      illustration: 'Illustration for AI & Data Intelligence',
+      items: [
+        { id: '3-1', title: 'Business Intelligence Dashboards' },
+        { id: '3-2', title: 'Predictive Analytics' },
+        { id: '3-3', title: 'Document Data Extraction' }
+      ],
+      buttonText: 'Get Started',
+      buttonLink: '/contact'
+    },
+    {
+      id: '4',
+      title: 'Data Science & Analytics',
+      illustration: 'Illustration for Data Science',
+      items: [
+        { id: '4-1', title: 'Machine Learning Solutions' },
+        { id: '4-2', title: 'Data Visualization' },
+        { id: '4-3', title: 'Predictive Modeling' }
       ],
       buttonText: 'Get Started',
       buttonLink: '/contact'
@@ -118,8 +142,8 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
               Our Services
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive technology solutions designed to transform your business operations
-              and drive sustainable growth.
+              Comprehensive technology solutions designed to enhance your digital presence,
+              unlock data insights, and drive business growth through innovation.
             </p>
           </div>
 
@@ -140,12 +164,18 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                       >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1}
-                          d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                        />
+                        {categoryIndex === 0 && (
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        )}
+                        {categoryIndex === 1 && (
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        )}
+                        {categoryIndex === 2 && (
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        )}
+                        {categoryIndex === 3 && (
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        )}
                       </svg>
                       <p className="text-gray-500 text-sm">{category.illustration}</p>
                     </div>
@@ -283,7 +313,7 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
                 </h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Your Partner for Seamless ERP Solutions and Business Growth.
+                Your Partner for Modern Web Solutions and Data-Driven Growth.
               </p>
             </div>
 
@@ -292,7 +322,7 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
               <h4 className="text-lg font-bold text-gray-900 mb-4">QUICK LINKS</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="/services" className="text-blue-600 font-medium">
+                  <a href="/services" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
                     Services
                   </a>
                 </li>
@@ -307,7 +337,7 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
                   </a>
                 </li>
                 <li>
-                  <a href="/about" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/about" className="text-blue-600 font-medium">
                     About Us
                   </a>
                 </li>
@@ -319,8 +349,8 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
               <h4 className="text-lg font-bold text-gray-900 mb-4">CORE SERVICES</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="/services/dynamics-365" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
-                    Dynamics 365 ERP
+                  <a href="/services/web-development" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                    Web & App Development
                   </a>
                 </li>
                 <li>
@@ -330,12 +360,12 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
                 </li>
                 <li>
                   <a href="/services/ai-intelligence" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
-                    AI & Business Intelligence
+                    AI & Data Intelligence
                   </a>
                 </li>
                 <li>
-                  <a href="/services/etims-integration" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
-                    eTIMS Integration
+                  <a href="/services/data-science" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                    Data Science & Analytics
                   </a>
                 </li>
               </ul>
@@ -346,14 +376,14 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
               <h4 className="text-lg font-bold text-gray-900 mb-4">CONTACT US</h4>
               <div className="space-y-3 text-gray-600">
                 <div>
-                  <p>Nachu Plaza, 10th Floor</p>
-                  <p>Kiambere Rd, Upper Hill, Nairobi</p>
+                  <p>PL4 8ND</p>
+                  <p>Nelson Street, Plymouth, UK</p>
                 </div>
                 <div>
-                  <p><span className="font-medium">Phone:</span> +254717353774</p>
+                  <p><span className="font-medium">Phone:</span> +44 739 4132 747</p>
                 </div>
                 <div>
-                  <p><span className="font-medium">Email:</span> info@signalsphere.co.ke</p>
+                  <p><span className="font-medium">Email:</span> info@signalsphere.co.uk</p>
                 </div>
               </div>
             </div>
@@ -362,7 +392,7 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
           {/* Footer Bottom */}
           <div className="border-t border-gray-200 mt-12 pt-8 text-center">
             <p className="text-gray-600">
-              © 2025 SignalSphere. All rights reserved.
+              © 2025 Signal Sphere. All rights reserved.
             </p>
           </div>
         </div>

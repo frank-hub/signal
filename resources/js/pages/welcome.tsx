@@ -80,8 +80,8 @@ const HomePage: React.FC<HomePageProps> = ({
           {/* Subtitle */}
           <div className="max-w-4xl mx-auto mb-12">
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-              Expert Microsoft Dynamics 365 implementation, AI-driven automation, custom
-              software development, and compliance solutions tailored for Kenyan businesses and
+              Website & Mobile App Dev, AI-driven automation, custom
+              software development, and compliance solutions tailored for UK businesses and
               beyond.
             </p>
           </div>
@@ -188,12 +188,11 @@ const HomePage: React.FC<HomePageProps> = ({
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  ERP & Business Automation
+                  Website & App Development
                 </h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Microsoft Dynamics 365 (BC & F&O) implementation, legacy system support
-                (AX/NAV), invoice automation, and workflow optimization.
+                We design and build modern, responsive websites and mobile apps tailored to your brand and business goals.
               </p>
             </div>
 
@@ -210,7 +209,7 @@ const HomePage: React.FC<HomePageProps> = ({
                 </h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Tailored software for unique needs, KRA eTIMS integration, system analysis, API development
+                Tailored software for unique needs, integrations, system analysis, API development
                 and ETL integrations.
               </p>
             </div>
@@ -242,12 +241,12 @@ const HomePage: React.FC<HomePageProps> = ({
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Financial Systems & Compliance
+                  Data Science & Analytics
                 </h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Financial systems consulting (COA structuring), BI for finance, tax optimization strategies, and
-                robust eTIMS compliance solutions.
+                Data analysis, predictive modeling, machine learning solutions, and
+                data visualization dashboards.
               </p>
             </div>
           </div>
@@ -266,7 +265,7 @@ const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* Strategic Technology Partner Section */}
-      <section className="py-16 md:py-24 bg-gray-50" id='why-us'>
+     <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-16">
@@ -287,10 +286,10 @@ const HomePage: React.FC<HomePageProps> = ({
                 <div className="w-6 h-6 bg-blue-600 rounded-full"></div>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Deep Expertise</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Technical Excellence</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Certified professionals in Dynamics 365, AI, cloud architecture
-                  (AWS, Azure), and custom software development.
+                  Expert team specializing in modern web development, AI integration,
+                  data analytics, and cloud-native solutions.
                 </p>
               </div>
             </div>
@@ -301,10 +300,10 @@ const HomePage: React.FC<HomePageProps> = ({
                 <div className="w-6 h-6 bg-blue-600 rounded-full"></div>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Local Insight, Global Standards</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Industry Best Practices</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Proven experience with Kenyan market needs (eTIMS experts)
-                  combined with international best practices.
+                  Proven methodologies and international standards combined with
+                  deep understanding of local market requirements.
                 </p>
               </div>
             </div>
@@ -315,10 +314,10 @@ const HomePage: React.FC<HomePageProps> = ({
                 <div className="w-6 h-6 bg-blue-600 rounded-full"></div>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Tailored Approach</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Custom Solutions</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  We listen first. Solutions are custom-designed to fit your unique
-                  processes, challenges, and goals.
+                  We prioritize understanding your needs. Every solution is
+                  carefully crafted to match your specific business requirements.
                 </p>
               </div>
             </div>
@@ -329,10 +328,10 @@ const HomePage: React.FC<HomePageProps> = ({
                 <div className="w-6 h-6 bg-blue-600 rounded-full"></div>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">End-to-End Partnership</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Complete Partnership</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  From initial analysis and implementation to ongoing support,
-                  training, and strategic growth planning.
+                  Comprehensive support from initial consultation and development
+                  to deployment, maintenance, and ongoing optimization.
                 </p>
               </div>
             </div>
@@ -343,10 +342,10 @@ const HomePage: React.FC<HomePageProps> = ({
                 <div className="w-6 h-6 bg-blue-600 rounded-full"></div>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation-Driven</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Future-Ready Technology</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Leveraging AI, cloud-native solutions, and modern development
-                  practices to keep your business ahead.
+                  Utilizing cutting-edge AI, machine learning, and modern development
+                  frameworks to ensure your solutions remain competitive.
                 </p>
               </div>
             </div>
@@ -357,10 +356,10 @@ const HomePage: React.FC<HomePageProps> = ({
                 <div className="w-6 h-6 bg-blue-600 rounded-full"></div>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Community Focused</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Data-Driven Insights</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Committed to empowering local organizations and fostering
-                  sustainable development through technology.
+                  Advanced analytics and business intelligence solutions that transform
+                  raw data into actionable insights for strategic decision-making.
                 </p>
               </div>
             </div>
@@ -397,7 +396,7 @@ const HomePage: React.FC<HomePageProps> = ({
                 </div>
                 <div>
                   <div className="font-bold text-gray-900">Management</div>
-                  <div className="text-gray-600 text-sm">Kenya Flower Council</div>
+                  <div className="text-gray-600 text-sm">Life Shop</div>
                 </div>
               </div>
             </div>
@@ -415,7 +414,7 @@ const HomePage: React.FC<HomePageProps> = ({
                 </div>
                 <div>
                   <div className="font-bold text-gray-900">Leadership Team</div>
-                  <div className="text-gray-600 text-sm">Naivas Limited</div>
+                  <div className="text-gray-600 text-sm">Wairegi Advocates</div>
                 </div>
               </div>
             </div>
@@ -544,7 +543,7 @@ const HomePage: React.FC<HomePageProps> = ({
                 </h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Your Partner for Seamless ERP Solutions and Business Growth.
+                Fueling Growth with Digital Innovation.
               </p>
             </div>
 
@@ -581,7 +580,7 @@ const HomePage: React.FC<HomePageProps> = ({
               <ul className="space-y-3">
                 <li>
                   <a href="/services/dynamics-365" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
-                    Dynamics 365 ERP
+                    Website & Mobile App Development
                   </a>
                 </li>
                 <li>
@@ -594,11 +593,7 @@ const HomePage: React.FC<HomePageProps> = ({
                     AI & Business Intelligence
                   </a>
                 </li>
-                <li>
-                  <a href="/services/etims-integration" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
-                    eTIMS Integration
-                  </a>
-                </li>
+
               </ul>
             </div>
 
@@ -607,11 +602,11 @@ const HomePage: React.FC<HomePageProps> = ({
               <h4 className="text-lg font-bold text-gray-900 mb-4">CONTACT US</h4>
               <div className="space-y-3 text-gray-600">
                 <div>
-                  <p>Nachu Plaza, 10th Floor</p>
-                  <p>Kiambere Rd, Upper Hill, Nairobi</p>
+                  <p>PL4 8ND</p>
+                  <p>Nelson Street, Plymouth, UK</p>
                 </div>
                 <div>
-                  <p><span className="font-medium">Phone:</span> +254717353774</p>
+                  <p><span className="font-medium">Phone:</span> +44 739 4132 747</p>
                 </div>
                 <div>
                   <p><span className="font-medium">Email:</span> info@signalsphere.co.ke</p>

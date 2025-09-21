@@ -146,9 +146,8 @@ const ContactPage: React.FC<ContactPageProps> = ({
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Office Address</h3>
                       <p className="text-gray-600">
-                        Nachu Plaza, 10th Floor<br />
-                        Kiambere Rd, Upper Hill<br />
-                        Nairobi, Kenya
+                        PL4 8ND<br />
+                        Nelson Street, Plymouth, UK
                       </p>
                     </div>
                   </div>
@@ -162,7 +161,7 @@ const ContactPage: React.FC<ContactPageProps> = ({
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                      <p className="text-gray-600">+254 743 169 096</p>
+                      <p className="text-gray-600">+44 739 4132 747</p>
                     </div>
                   </div>
 
@@ -307,12 +306,12 @@ const ContactPage: React.FC<ContactPageProps> = ({
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
                     >
                       <option value="">Select a service</option>
-                      <option value="microsoft-dynamics-365">Microsoft Dynamics 365</option>
+                      <option value="website-design_dev">Website Development</option>
                       <option value="custom-erp-development">Custom ERP Development</option>
                       <option value="legacy-system-migration">Legacy System Migration</option>
                       <option value="etims-integration">eTIMS Integration</option>
                       <option value="invoice-automation">Invoice Automation</option>
-                      <option value="financial-systems-audit">Financial Systems Audit</option>
+                      <option value="mobile_app_dev">Mobile App Dev</option>
                       <option value="ai-business-intelligence">AI & Business Intelligence</option>
                       <option value="consultation">General Consultation</option>
                       <option value="other">Other</option>
@@ -438,7 +437,7 @@ const ContactPage: React.FC<ContactPageProps> = ({
                 </h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Your Partner for Seamless ERP Solutions and Business Growth.
+                Your Partner for Modern Web Solutions and Data-Driven Growth.
               </p>
             </div>
 
@@ -501,8 +500,8 @@ const ContactPage: React.FC<ContactPageProps> = ({
               <h4 className="text-lg font-bold text-gray-900 mb-4">CONTACT US</h4>
               <div className="space-y-3 text-gray-600">
                 <div>
-                  <p>Nachu Plaza, 10th Floor</p>
-                  <p>Kiambere Rd, Upper Hill, Nairobi</p>
+                  <p>PL4 8ND</p>
+                  <p>Nelson Street, Plymouth, UK</p>
                 </div>
                 <div>
                   <p><span className="font-medium">Phone:</span> +254 743 169 096</p>
