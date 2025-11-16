@@ -21,6 +21,14 @@ Route::get('/contact', function () {
     return Inertia::render('Contact');
 })->name('contact');
 
+Route::get('/ict-supplies', function () {
+    return Inertia::render('ICT_Supplies');
+})->name('ict_supply');
+
+Route::get('/why-us', function () {
+    return Inertia::render('why_us');
+})->name('why-us');
+
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {
         return Inertia::render('dashboard');

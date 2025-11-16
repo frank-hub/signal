@@ -21,6 +21,7 @@ interface AboutPageProps {
 const AboutPage: React.FC<AboutPageProps> = ({
   navItems = [
     { label: 'Services', href: '/services' },
+    { label: 'ICT Supplies', href: '/ict-supplies' },
     { label: 'Why Us', href: '/why-us' },
     { label: 'Success Stories', href: '/success-stories' },
     { label: 'About', href: '/about' }
@@ -30,7 +31,7 @@ const AboutPage: React.FC<AboutPageProps> = ({
       id: '1',
       name: 'John Doe',
       position: 'CEO & Founder',
-      bio: 'Expert in Microsoft Dynamics 365 with 15+ years of experience in enterprise solutions.'
+      bio: 'Expert in modern web development with 15+ years of experience in enterprise solutions.'
     },
     {
       id: '2',
@@ -42,7 +43,7 @@ const AboutPage: React.FC<AboutPageProps> = ({
       id: '3',
       name: 'Michael Johnson',
       position: 'Lead Developer',
-      bio: 'Full-stack developer specializing in custom ERP solutions and system integrations.'
+      bio: 'Full-stack developer specializing in custom solutions and system integrations.'
     }
   ]
 }) => {
@@ -52,15 +53,12 @@ const AboutPage: React.FC<AboutPageProps> = ({
       <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4 md:py-6">
-            {/* Logo */}
             <div className="flex items-center">
               <a href="/" className="text-2xl font-bold">
                 <span className="text-gray-900">Signal</span>
-                <span className="text-blue-600">Sphere</span>
+                <span className="text-red-600">Sphere</span>
               </a>
             </div>
-
-            {/* Navigation Menu */}
             <nav className="hidden md:flex items-center space-x-8">
               {navItems.map((item, index) => (
                 <a
@@ -68,8 +66,8 @@ const AboutPage: React.FC<AboutPageProps> = ({
                   href={item.href}
                   className={`transition-colors duration-200 font-medium ${
                     item.label === 'About'
-                      ? 'text-blue-600'
-                      : 'text-gray-700 hover:text-blue-600'
+                      ? 'text-red-600'
+                      : 'text-gray-700 hover:text-red-600'
                   }`}
                 >
                   {item.label}
@@ -77,15 +75,13 @@ const AboutPage: React.FC<AboutPageProps> = ({
               ))}
               <a
                 href="/contact"
-                className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium"
+                className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors duration-200 font-medium"
               >
                 Contact Us
               </a>
             </nav>
-
-            {/* Mobile menu button */}
             <div className="md:hidden">
-              <button className="text-gray-700 hover:text-blue-600 focus:outline-none">
+              <button className="text-gray-700 hover:text-red-600 focus:outline-none">
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -98,8 +94,6 @@ const AboutPage: React.FC<AboutPageProps> = ({
       {/* Main Content */}
       <main className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-          {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               About SignalSphere
@@ -137,7 +131,7 @@ const AboutPage: React.FC<AboutPageProps> = ({
                 <div className="aspect-[4/3] bg-gray-100 rounded-lg flex items-center justify-center">
                   <div className="text-center">
                     <svg
-                      className="w-24 h-24 text-gray-400 mx-auto mb-4"
+                      className="w-24 h-24 text-red-500 mx-auto mb-4"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -159,9 +153,9 @@ const AboutPage: React.FC<AboutPageProps> = ({
           {/* Our Mission & Vision */}
           <div className="mb-20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-blue-50 rounded-lg p-8">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <svg className="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="bg-red-50 rounded-lg p-8">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                  <svg className="w-6 h-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
@@ -201,8 +195,8 @@ const AboutPage: React.FC<AboutPageProps> = ({
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <svg className="w-8 h-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
@@ -214,8 +208,8 @@ const AboutPage: React.FC<AboutPageProps> = ({
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <svg className="w-8 h-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
@@ -227,8 +221,8 @@ const AboutPage: React.FC<AboutPageProps> = ({
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <svg className="w-8 h-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 </div>
@@ -248,7 +242,7 @@ const AboutPage: React.FC<AboutPageProps> = ({
                 Meet Our Team
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                The passionate experts behind SignalSphere' success, bringing together diverse skills
+                The passionate experts behind SignalSphere's success, bringing together diverse skills
                 and deep industry experience.
               </p>
             </div>
@@ -270,7 +264,7 @@ const AboutPage: React.FC<AboutPageProps> = ({
                     )}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                  <p className="text-blue-600 font-medium mb-4">{member.position}</p>
+                  <p className="text-red-600 font-medium mb-4">{member.position}</p>
                   <p className="text-gray-600 leading-relaxed text-sm">{member.bio}</p>
                 </div>
               ))}
@@ -278,17 +272,17 @@ const AboutPage: React.FC<AboutPageProps> = ({
           </div>
 
           {/* Call to Action */}
-          <div className="text-center bg-blue-600 rounded-2xl p-12 text-white">
+          <div className="text-center bg-red-600 rounded-2xl p-12 text-white">
             <h2 className="text-3xl font-bold mb-4">
               Ready to Work With Us?
             </h2>
-            <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-red-100 mb-8 max-w-2xl mx-auto">
               Let's discuss how our expertise and passion for technology can help
               transform your business operations.
             </p>
             <a
               href="/contact"
-              className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-200 font-medium text-lg group"
+              className="inline-flex items-center bg-white text-red-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-200 font-medium text-lg group"
             >
               Get In Touch
               <svg
@@ -308,95 +302,90 @@ const AboutPage: React.FC<AboutPageProps> = ({
       <footer className="bg-gray-100 py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-            {/* Company Info */}
             <div className="lg:col-span-1">
               <div className="mb-6">
                 <h3 className="text-2xl font-bold">
                   <span className="text-gray-900">Signal</span>
-                  <span className="text-blue-600">Sphere</span>
+                  <span className="text-red-600">Sphere</span>
                 </h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Your Partner for Modern Web Solutions and Data-Driven Growth.
+                Fueling Growth with Digital Innovation.
               </p>
             </div>
 
-            {/* Quick Links */}
             <div>
               <h4 className="text-lg font-bold text-gray-900 mb-4">QUICK LINKS</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="/services" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/services" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     Services
                   </a>
                 </li>
                 <li>
-                  <a href="/why-us" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/why-us" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     Why Choose Us
                   </a>
                 </li>
                 <li>
-                  <a href="/case-studies" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/case-studies" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     Case Studies
                   </a>
                 </li>
                 <li>
-                  <a href="/about" className="text-blue-600 font-medium">
+                  <a href="/about" className="text-red-600 font-medium">
                     About Us
                   </a>
                 </li>
               </ul>
             </div>
 
-            {/* Core Services */}
             <div>
               <h4 className="text-lg font-bold text-gray-900 mb-4">CORE SERVICES</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="/services/web-development" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/services/web-development" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     Web & App Development
                   </a>
                 </li>
                 <li>
-                  <a href="/services/custom-development" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/services/custom-development" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     Custom Development
                   </a>
                 </li>
                 <li>
-                  <a href="/services/ai-intelligence" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/services/ai-intelligence" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     AI & Data Intelligence
                   </a>
                 </li>
                 <li>
-                  <a href="/services/data-science" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/services/data-science" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     Data Science & Analytics
                   </a>
                 </li>
               </ul>
             </div>
 
-            {/* Contact Us */}
             <div>
               <h4 className="text-lg font-bold text-gray-900 mb-4">CONTACT US</h4>
               <div className="space-y-3 text-gray-600">
                 <div>
-                  <p>PL4 8ND</p>
-                  <p>Nelson Street, Plymouth, UK</p>
+                  <p>5th Floor Towers</p>
+                  <p>Ojijo Road , Nairobi Kenya</p>
                 </div>
                 <div>
-                  <p><span className="font-medium">Phone:</span> +44 739 4132 747</p>
+                  <p><span className="font-medium">Phone:</span> +254</p>
                 </div>
                 <div>
-                  <p><span className="font-medium">Email:</span> info@signalsphere.co.uk</p>
+                  <p><span className="font-medium">Email:</span> hello@signal-sphere.com</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Footer Bottom */}
           <div className="border-t border-gray-200 mt-12 pt-8 text-center">
             <p className="text-gray-600">
-              © 2025 Signal Sphere. All rights reserved.
+              © 2025 SignalSphere. All rights reserved.
             </p>
           </div>
         </div>

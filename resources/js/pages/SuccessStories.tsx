@@ -27,6 +27,7 @@ interface CaseStudiesPageProps {
 const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
   navItems = [
     { label: 'Services', href: '/services' },
+    { label: 'ICT Supplies', href: '/ict-supplies' },
     { label: 'Why Us', href: '/why-us' },
     { label: 'Success Stories', href: '/success-stories' },
     { label: 'About', href: '/about' }
@@ -34,15 +35,15 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
   caseStudies = [
     {
       id: '1',
-      category: 'AGRICULTURE',
-      title: 'Kenya Flower Council',
-      challenge: 'Manual processes slowing down operations',
-      solution: 'Custom ERP implementation',
+      category: 'ECOMMERCE',
+      title: 'Life Shop',
+      challenge: 'Manual inventory management & Vendor coordination',
+      solution: 'Automated inventory & vendor management system',
       keyResults: [
-        { text: '30% increase in productivity', value: '30%' },
-        { text: '45% reduction in processing time', value: '45%' }
+        { text: '30% increase in sales', value: '30%' },
+        { text: '45% reduction in errors', value: '45%' }
       ],
-      slug: 'kenya-flower-council'
+      slug: 'life-shop'
     },
     {
       id: '2',
@@ -72,12 +73,12 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
 }) => {
   const getCategoryColor = (category: string) => {
     switch (category.toLowerCase()) {
-      case 'agriculture':
-        return 'bg-blue-100 text-blue-600';
+      case 'ecommerce':
+        return 'bg-red-100 text-red-600';
       case 'technology':
-        return 'bg-blue-100 text-blue-600';
+        return 'bg-red-100 text-red-600';
       case 'healthcare':
-        return 'bg-blue-100 text-blue-600';
+        return 'bg-red-100 text-red-600';
       default:
         return 'bg-gray-100 text-gray-600';
     }
@@ -93,7 +94,7 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
             <div className="flex items-center">
               <a href="/" className="text-2xl font-bold">
                 <span className="text-gray-900">Signal</span>
-                <span className="text-blue-600">Sphere</span>
+                <span className="text-red-600">Sphere</span>
               </a>
             </div>
 
@@ -105,8 +106,8 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
                   href={item.href}
                   className={`transition-colors duration-200 font-medium ${
                     item.label === 'Success Stories'
-                      ? 'text-blue-600'
-                      : 'text-gray-700 hover:text-blue-600'
+                      ? 'text-red-600'
+                      : 'text-gray-700 hover:text-red-600'
                   }`}
                 >
                   {item.label}
@@ -114,7 +115,7 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
               ))}
               <a
                 href="/contact"
-                className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium"
+                className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors duration-200 font-medium"
               >
                 Contact Us
               </a>
@@ -122,7 +123,7 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
 
             {/* Mobile menu button */}
             <div className="md:hidden">
-              <button className="text-gray-700 hover:text-blue-600 focus:outline-none">
+              <button className="text-gray-700 hover:text-red-600 focus:outline-none">
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -202,7 +203,7 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
                     <div className="space-y-2">
                       {study.keyResults.map((result, index) => (
                         <div key={index} className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-blue-600 rounded-full flex-shrink-0"></div>
+                          <div className="w-2 h-2 bg-red-600 rounded-full flex-shrink-0"></div>
                           <span className="text-gray-700 text-sm">{result.text}</span>
                         </div>
                       ))}
@@ -212,7 +213,7 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
                   {/* Read Full Case Study Link */}
                   <a
                     href={`/case-studies/${study.slug}`}
-                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors duration-200 group"
+                    className="inline-flex items-center text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 group"
                   >
                     Read Full Case Study
                     <svg
@@ -240,7 +241,7 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
             </p>
             <a
               href="/contact"
-              className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all duration-200 font-medium text-lg group"
+              className="inline-flex items-center bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-all duration-200 font-medium text-lg group"
             >
               Start Your Transformation
               <svg
@@ -265,11 +266,11 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
               <div className="mb-6">
                 <h3 className="text-2xl font-bold">
                   <span className="text-gray-900">Signal</span>
-                  <span className="text-blue-600">Sphere</span>
+                  <span className="text-red-600">Sphere</span>
                 </h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Your Partner for Modern Web Solutions and Data-Driven Growth.
+                Fueling Growth with Digital Innovation.
               </p>
             </div>
 
@@ -278,22 +279,22 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
               <h4 className="text-lg font-bold text-gray-900 mb-4">QUICK LINKS</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="/services" className="text-blue-600 font-medium">
+                  <a href="/services" className="text-red-600 font-medium">
                     Services
                   </a>
                 </li>
                 <li>
-                  <a href="/why-us" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/why-us" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     Why Choose Us
                   </a>
                 </li>
                 <li>
-                  <a href="/case-studies" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/case-studies" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     Case Studies
                   </a>
                 </li>
                 <li>
-                  <a href="/about" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/about" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     About Us
                   </a>
                 </li>
@@ -305,17 +306,17 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
               <h4 className="text-lg font-bold text-gray-900 mb-4">CORE SERVICES</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="/services/dynamics-365" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/services/dynamics-365" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     Website & Mobile App Development
                   </a>
                 </li>
                 <li>
-                  <a href="/services/custom-development" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/services/custom-development" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     Custom Development
                   </a>
                 </li>
                 <li>
-                  <a href="/services/ai-intelligence" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/services/ai-intelligence" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     AI & Business Intelligence
                   </a>
                 </li>
@@ -328,14 +329,14 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
               <h4 className="text-lg font-bold text-gray-900 mb-4">CONTACT US</h4>
               <div className="space-y-3 text-gray-600">
                 <div>
-                  <p>PL4 8ND</p>
-                  <p>Nelson Street, Plymouth, UK</p>
+                  <p>5th Floor Towers</p>
+                  <p>Ojijo Road , Nairobi Kenya</p>
                 </div>
                 <div>
-                  <p><span className="font-medium">Phone:</span> +44 739 4132 747</p>
+                  <p><span className="font-medium">Phone:</span> +254</p>
                 </div>
                 <div>
-                  <p><span className="font-medium">Email:</span> info@signalsphere.co.ke</p>
+                  <p><span className="font-medium">Email:</span> hello@signal-sphere.com</p>
                 </div>
               </div>
             </div>

@@ -28,6 +28,7 @@ interface ServicesPageProps {
 const ServicesPage: React.FC<ServicesPageProps> = ({
   navItems = [
     { label: 'Services', href: '/services' },
+    { label: 'ICT Supplies', href: '/ict-supplies' },
     { label: 'Why Us', href: '/why-us' },
     { label: 'Success Stories', href: '/success-stories' },
     { label: 'About', href: '/about' }
@@ -93,7 +94,7 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
             <div className="flex items-center">
               <a href="/" className="text-2xl font-bold">
                 <span className="text-gray-900">Signal</span>
-                <span className="text-blue-600">Sphere</span>
+                <span className="text-red-600">Sphere</span>
               </a>
             </div>
 
@@ -105,8 +106,8 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
                   href={item.href}
                   className={`transition-colors duration-200 font-medium ${
                     item.label === 'Services'
-                      ? 'text-blue-600'
-                      : 'text-gray-700 hover:text-blue-600'
+                      ? 'text-red-600'
+                      : 'text-gray-700 hover:text-red-600'
                   }`}
                 >
                   {item.label}
@@ -114,7 +115,7 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
               ))}
               <a
                 href="/contact"
-                className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium"
+                className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors duration-200 font-medium"
               >
                 Contact Us
               </a>
@@ -122,7 +123,7 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
 
             {/* Mobile menu button */}
             <div className="md:hidden">
-              <button className="text-gray-700 hover:text-blue-600 focus:outline-none">
+              <button className="text-gray-700 hover:text-red-600 focus:outline-none">
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -159,7 +160,7 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
                   <div className="aspect-[4/3] bg-gray-100 rounded-lg flex items-center justify-center">
                     <div className="text-center">
                       <svg
-                        className="w-24 h-24 text-gray-400 mx-auto mb-4"
+                        className="w-24 h-24 text-red-500 mx-auto mb-4"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -192,8 +193,8 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
                   <div className="space-y-4 mb-8">
                     {category.items.map((item) => (
                       <div key={item.id} className="flex items-start space-x-3">
-                        <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-0.5">
-                          <svg className="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <div className="flex-shrink-0 w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mt-0.5">
+                          <svg className="w-3 h-3 text-red-600" fill="currentColor" viewBox="0 0 20 20">
                             <path
                               fillRule="evenodd"
                               d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -218,7 +219,7 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
                   {/* Get Started Button */}
                   <a
                     href={category.buttonLink}
-                    className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all duration-200 font-medium group"
+                    className="inline-flex items-center bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-all duration-200 font-medium group"
                   >
                     {category.buttonText}
                     <svg
@@ -257,8 +258,8 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
               ].map((service, index) => (
                 <div key={index} className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <svg className="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                    <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center">
+                      <svg className="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 20 20">
                         <path
                           fillRule="evenodd"
                           d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -274,17 +275,17 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
           </div>
 
           {/* Call to Action */}
-          <div className="mt-20 text-center bg-blue-600 rounded-2xl p-12 text-white">
+          <div className="mt-20 text-center bg-red-600 rounded-2xl p-12 text-white">
             <h2 className="text-3xl font-bold mb-4">
               Ready to Get Started?
             </h2>
-            <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-red-100 mb-8 max-w-2xl mx-auto">
               Let's discuss how our services can help transform your business operations
               and drive measurable results.
             </p>
             <a
               href="/contact"
-              className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-200 font-medium text-lg group"
+              className="inline-flex items-center bg-white text-red-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-200 font-medium text-lg group"
             >
               Schedule a Consultation
               <svg
@@ -309,11 +310,11 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
               <div className="mb-6">
                 <h3 className="text-2xl font-bold">
                   <span className="text-gray-900">Signal</span>
-                  <span className="text-blue-600">Sphere</span>
+                  <span className="text-red-600">Sphere</span>
                 </h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Your Partner for Modern Web Solutions and Data-Driven Growth.
+                Fueling Growth with Digital Innovation.
               </p>
             </div>
 
@@ -322,22 +323,22 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
               <h4 className="text-lg font-bold text-gray-900 mb-4">QUICK LINKS</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="/services" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/services" className="text-red-600 font-medium">
                     Services
                   </a>
                 </li>
                 <li>
-                  <a href="/why-us" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/why-us" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     Why Choose Us
                   </a>
                 </li>
                 <li>
-                  <a href="/case-studies" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/case-studies" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     Case Studies
                   </a>
                 </li>
                 <li>
-                  <a href="/about" className="text-blue-600 font-medium">
+                  <a href="/about" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     About Us
                   </a>
                 </li>
@@ -349,22 +350,22 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
               <h4 className="text-lg font-bold text-gray-900 mb-4">CORE SERVICES</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="/services/web-development" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/services/web-development" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     Web & App Development
                   </a>
                 </li>
                 <li>
-                  <a href="/services/custom-development" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/services/custom-development" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     Custom Development
                   </a>
                 </li>
                 <li>
-                  <a href="/services/ai-intelligence" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/services/ai-intelligence" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     AI & Data Intelligence
                   </a>
                 </li>
                 <li>
-                  <a href="/services/data-science" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/services/data-science" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     Data Science & Analytics
                   </a>
                 </li>
@@ -376,14 +377,14 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
               <h4 className="text-lg font-bold text-gray-900 mb-4">CONTACT US</h4>
               <div className="space-y-3 text-gray-600">
                 <div>
-                  <p>PL4 8ND</p>
-                  <p>Nelson Street, Plymouth, UK</p>
+                  <p>5th Floor Towers</p>
+                  <p>Ojijo Road , Nairobi Kenya</p>
                 </div>
                 <div>
-                  <p><span className="font-medium">Phone:</span> +44 739 4132 747</p>
+                  <p><span className="font-medium">Phone:</span> +254</p>
                 </div>
                 <div>
-                  <p><span className="font-medium">Email:</span> info@signalsphere.co.uk</p>
+                  <p><span className="font-medium">Email:</span> hello@signal-sphere.com</p>
                 </div>
               </div>
             </div>
@@ -392,7 +393,7 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
           {/* Footer Bottom */}
           <div className="border-t border-gray-200 mt-12 pt-8 text-center">
             <p className="text-gray-600">
-              © 2025 Signal Sphere. All rights reserved.
+              © 2025 SignalSphere. All rights reserved.
             </p>
           </div>
         </div>

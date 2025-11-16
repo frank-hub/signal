@@ -11,12 +11,15 @@ interface HomePageProps {
 
 const HomePage: React.FC<HomePageProps> = ({
   navItems = [
-    { label: 'Services', href: '#services' },
-    { label: 'Why Us', href: '#why-us' },
+    { label: 'Services', href: '/services' },
+    { label: 'ICT Supplies', href: '/ict-supplies' },
+    { label: 'Why Us', href: '/why-us' },
     { label: 'Success Stories', href: '/success-stories' },
     { label: 'About', href: '/about' }
   ]
 }) => {
+      const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Navigation Header */}
@@ -28,7 +31,7 @@ const HomePage: React.FC<HomePageProps> = ({
               <a href="/">
                 <h1 className="text-2xl font-bold">
                 <span className="text-gray-900">Signal</span>
-                <span className="text-blue-600">Sphere</span>
+                <span className="text-red-600">Sphere</span>
               </h1>
               </a>
             </div>
@@ -39,14 +42,14 @@ const HomePage: React.FC<HomePageProps> = ({
                 <a
                   key={index}
                   href={item.href}
-                  className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+                  className="text-gray-700 hover:text-red-600 transition-colors duration-200 font-medium"
                 >
                   {item.label}
                 </a>
               ))}
               <a
                 href="/contact"
-                className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium"
+                className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors duration-200 font-medium"
               >
                 Contact Us
               </a>
@@ -54,13 +57,45 @@ const HomePage: React.FC<HomePageProps> = ({
 
             {/* Mobile menu button */}
             <div className="md:hidden">
-              <button className="text-gray-700 hover:text-blue-600 focus:outline-none">
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="text-gray-700 hover:text-red-600 focus:outline-none"
+              >
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  {isMobileMenuOpen ? (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  ) : (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  )}
                 </svg>
               </button>
             </div>
           </div>
+
+          {/* Mobile Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden border-t border-gray-200 py-4">
+              <div className="flex flex-col space-y-4">
+                {navItems.map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.href}
+                    className="text-gray-700 hover:text-red-600 transition-colors duration-200 font-medium px-4"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                ))}
+                <a
+                  href="/contact"
+                  className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors duration-200 font-medium mx-4 text-center"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Contact Us
+                </a>
+              </div>
+            </div>
+          )}
         </div>
       </header>
 
@@ -71,7 +106,7 @@ const HomePage: React.FC<HomePageProps> = ({
           <div className="max-w-4xl mx-auto mb-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               <span className="text-gray-900 block">Transform Your Business with</span>
-              <span className="bg-gradient-to-r from-blue-500 via-cyan-500 to-green-500 bg-clip-text text-transparent block mt-2">
+              <span className="bg-gradient-to-r from-red-500 via-rose-500 to-pink-500 bg-clip-text text-transparent block mt-2">
                 Intelligent Technology
               </span>
             </h1>
@@ -81,14 +116,14 @@ const HomePage: React.FC<HomePageProps> = ({
           <div className="max-w-4xl mx-auto mb-12">
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
               Website & Mobile App Dev, AI-driven automation, custom
-              software development, and compliance solutions tailored for UK businesses and
+              software development, and compliance solutions tailored for Kenya businesses and
               beyond.
             </p>
           </div>
 
           {/* Call to Action Buttons */}
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center max-w-md mx-auto">
-            <a href='/contact' className="w-full sm:w-auto bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all duration-200 font-medium text-sm flex items-center justify-center group">
+            <a href='/contact' className="w-full sm:w-auto bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-all duration-200 font-medium text-sm flex items-center justify-center group">
               Consult Us
               <svg
                 className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200"
@@ -138,25 +173,25 @@ const HomePage: React.FC<HomePageProps> = ({
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Stat 1 */}
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">30+</div>
+              <div className="text-4xl md:text-5xl font-bold text-red-600 mb-2">30+</div>
               <div className="text-gray-600 font-medium">Organizations Empowered</div>
             </div>
 
             {/* Stat 2 */}
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">100k+</div>
+              <div className="text-4xl md:text-5xl font-bold text-red-600 mb-2">100k+</div>
               <div className="text-gray-600 font-medium">Daily Transactions Processed</div>
             </div>
 
             {/* Stat 3 */}
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">98%</div>
+              <div className="text-4xl md:text-5xl font-bold text-red-600 mb-2">98%</div>
               <div className="text-gray-600 font-medium">Client Satisfaction Rate</div>
             </div>
 
             {/* Stat 4 */}
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">40%</div>
+              <div className="text-4xl md:text-5xl font-bold text-red-600 mb-2">40%</div>
               <div className="text-gray-600 font-medium">Avg. Efficiency Gain Reported</div>
             </div>
           </div>
@@ -182,8 +217,8 @@ const HomePage: React.FC<HomePageProps> = ({
             {/* Card 1: ERP & Business Automation */}
             <div className="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300">
               <div className="mb-6">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
@@ -199,8 +234,8 @@ const HomePage: React.FC<HomePageProps> = ({
             {/* Card 2: Custom Development & Integration */}
             <div className="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300">
               <div className="mb-6">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                   </svg>
                 </div>
@@ -217,8 +252,8 @@ const HomePage: React.FC<HomePageProps> = ({
             {/* Card 3: AI & Data Intelligence */}
             <div className="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300">
               <div className="mb-6">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 </div>
@@ -235,8 +270,8 @@ const HomePage: React.FC<HomePageProps> = ({
             {/* Card 4: Financial Systems & Compliance */}
             <div className="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300">
               <div className="mb-6">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
@@ -250,10 +285,10 @@ const HomePage: React.FC<HomePageProps> = ({
               </p>
             </div>
           </div>
-                    <div className="text-center">
+                    <div className="text-center mt-12">
             <a
               href="/services"
-              className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-lg transition-colors duration-200"
+              className="inline-flex items-center text-red-600 hover:text-red-700 font-medium text-lg transition-colors duration-200"
             >
               View all Services
               <svg className="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -282,8 +317,8 @@ const HomePage: React.FC<HomePageProps> = ({
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
             {/* Feature 1 */}
             <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                <div className="w-6 h-6 bg-blue-600 rounded-full"></div>
+              <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                <div className="w-6 h-6 bg-red-600 rounded-full"></div>
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Technical Excellence</h3>
@@ -296,8 +331,8 @@ const HomePage: React.FC<HomePageProps> = ({
 
             {/* Feature 2 */}
             <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                <div className="w-6 h-6 bg-blue-600 rounded-full"></div>
+              <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                <div className="w-6 h-6 bg-red-600 rounded-full"></div>
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Industry Best Practices</h3>
@@ -310,8 +345,8 @@ const HomePage: React.FC<HomePageProps> = ({
 
             {/* Feature 3 */}
             <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                <div className="w-6 h-6 bg-blue-600 rounded-full"></div>
+              <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                <div className="w-6 h-6 bg-red-600 rounded-full"></div>
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Custom Solutions</h3>
@@ -324,8 +359,8 @@ const HomePage: React.FC<HomePageProps> = ({
 
             {/* Feature 4 */}
             <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                <div className="w-6 h-6 bg-blue-600 rounded-full"></div>
+              <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                <div className="w-6 h-6 bg-red-600 rounded-full"></div>
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Complete Partnership</h3>
@@ -338,8 +373,8 @@ const HomePage: React.FC<HomePageProps> = ({
 
             {/* Feature 5 */}
             <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                <div className="w-6 h-6 bg-blue-600 rounded-full"></div>
+              <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                <div className="w-6 h-6 bg-red-600 rounded-full"></div>
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Future-Ready Technology</h3>
@@ -352,8 +387,8 @@ const HomePage: React.FC<HomePageProps> = ({
 
             {/* Feature 6 */}
             <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                <div className="w-6 h-6 bg-blue-600 rounded-full"></div>
+              <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                <div className="w-6 h-6 bg-red-600 rounded-full"></div>
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Data-Driven Insights</h3>
@@ -424,7 +459,7 @@ const HomePage: React.FC<HomePageProps> = ({
           <div className="text-center">
             <a
               href="/success-stories"
-              className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-lg transition-colors duration-200"
+              className="inline-flex items-center text-red-600 hover:text-red-700 font-medium text-lg transition-colors duration-200"
             >
               View all Success Stories
               <svg className="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -457,7 +492,7 @@ const HomePage: React.FC<HomePageProps> = ({
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {/* Step 1 */}
               <div className="text-center relative">
-                <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 relative z-10">
+                <div className="w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 relative z-10">
                   1
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Discover & Analyze</h3>
@@ -468,7 +503,7 @@ const HomePage: React.FC<HomePageProps> = ({
 
               {/* Step 2 */}
               <div className="text-center relative">
-                <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 relative z-10">
+                <div className="w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 relative z-10">
                   2
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Plan & Design</h3>
@@ -479,7 +514,7 @@ const HomePage: React.FC<HomePageProps> = ({
 
               {/* Step 3 */}
               <div className="text-center relative">
-                <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 relative z-10">
+                <div className="w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 relative z-10">
                   3
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Implement & Test</h3>
@@ -490,7 +525,7 @@ const HomePage: React.FC<HomePageProps> = ({
 
               {/* Step 4 */}
               <div className="text-center relative">
-                <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 relative z-10">
+                <div className="w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 relative z-10">
                   4
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Support & Grow</h3>
@@ -504,18 +539,18 @@ const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-16 md:py-24 bg-blue-600">
+      <section className="py-16 md:py-24 bg-red-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
+          <p className="text-lg md:text-xl text-red-100 mb-8 leading-relaxed">
             Let's discuss how Signal Sphere's tailored ERP, custom software, and AI solutions can help
             you achieve operational excellence and sustainable growth.
           </p>
           <a
             href="/contact"
-            className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-200 font-medium text-lg group"
+            className="inline-flex items-center bg-white text-red-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-all duration-200 font-medium text-lg group"
           >
             Get Started Today
             <svg
@@ -539,7 +574,7 @@ const HomePage: React.FC<HomePageProps> = ({
               <div className="mb-6">
                 <h3 className="text-2xl font-bold">
                   <span className="text-gray-900">Signal</span>
-                  <span className="text-blue-600">Sphere</span>
+                  <span className="text-red-600">Sphere</span>
                 </h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
@@ -552,22 +587,22 @@ const HomePage: React.FC<HomePageProps> = ({
               <h4 className="text-lg font-bold text-gray-900 mb-4">QUICK LINKS</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="/services" className="text-blue-600 font-medium">
+                  <a href="/services" className="text-red-600 font-medium">
                     Services
                   </a>
                 </li>
                 <li>
-                  <a href="/why-us" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/why-us" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     Why Choose Us
                   </a>
                 </li>
                 <li>
-                  <a href="/case-studies" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/case-studies" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     Case Studies
                   </a>
                 </li>
                 <li>
-                  <a href="/about" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/about" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     About Us
                   </a>
                 </li>
@@ -579,17 +614,17 @@ const HomePage: React.FC<HomePageProps> = ({
               <h4 className="text-lg font-bold text-gray-900 mb-4">CORE SERVICES</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="/services/dynamics-365" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/services/dynamics-365" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     Website & Mobile App Development
                   </a>
                 </li>
                 <li>
-                  <a href="/services/custom-development" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/services/custom-development" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     Custom Development
                   </a>
                 </li>
                 <li>
-                  <a href="/services/ai-intelligence" className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                  <a href="/services/ai-intelligence" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     AI & Business Intelligence
                   </a>
                 </li>
@@ -602,14 +637,14 @@ const HomePage: React.FC<HomePageProps> = ({
               <h4 className="text-lg font-bold text-gray-900 mb-4">CONTACT US</h4>
               <div className="space-y-3 text-gray-600">
                 <div>
-                  <p>PL4 8ND</p>
-                  <p>Nelson Street, Plymouth, UK</p>
+                  <p>5th Floor Towers</p>
+                  <p>Ojijo Road , Nairobi Kenya</p>
                 </div>
                 <div>
-                  <p><span className="font-medium">Phone:</span> +44 739 4132 747</p>
+                  <p><span className="font-medium">Phone:</span> +254 717 353774</p>
                 </div>
                 <div>
-                  <p><span className="font-medium">Email:</span> info@signalsphere.co.ke</p>
+                  <p><span className="font-medium">Email:</span> hello@signal-sphere.com</p>
                 </div>
               </div>
             </div>
@@ -618,7 +653,7 @@ const HomePage: React.FC<HomePageProps> = ({
           {/* Footer Bottom */}
           <div className="border-t border-gray-200 mt-12 pt-8 text-center">
             <p className="text-gray-600">
-              © 2025 SignalSphere. All rights reserved.
+              © 2025 Signal Sphere. All rights reserved.
             </p>
           </div>
         </div>
