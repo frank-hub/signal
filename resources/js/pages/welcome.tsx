@@ -597,7 +597,7 @@ const HomePage: React.FC<HomePageProps> = ({
                   </a>
                 </li>
                 <li>
-                  <a href="/case-studies" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
+                  <a href="/success-stories" className="text-gray-600 hover:text-red-600 transition-colors duration-200">
                     Case Studies
                   </a>
                 </li>

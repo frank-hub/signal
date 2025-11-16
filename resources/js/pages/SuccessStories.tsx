@@ -83,7 +83,7 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
         return 'bg-gray-100 text-gray-600';
     }
   };
-
+      const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation Header */}
@@ -92,9 +92,11 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
           <div className="flex justify-between items-center py-4 md:py-6">
             {/* Logo */}
             <div className="flex items-center">
-              <a href="/" className="text-2xl font-bold">
+              <a href="/">
+                <h1 className="text-2xl font-bold">
                 <span className="text-gray-900">Signal</span>
                 <span className="text-red-600">Sphere</span>
+              </h1>
               </a>
             </div>
 
@@ -104,11 +106,7 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
                 <a
                   key={index}
                   href={item.href}
-                  className={`transition-colors duration-200 font-medium ${
-                    item.label === 'Success Stories'
-                      ? 'text-red-600'
-                      : 'text-gray-700 hover:text-red-600'
-                  }`}
+                  className="text-gray-700 hover:text-red-600 transition-colors duration-200 font-medium"
                 >
                   {item.label}
                 </a>
@@ -123,16 +121,47 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({
 
             {/* Mobile menu button */}
             <div className="md:hidden">
-              <button className="text-gray-700 hover:text-red-600 focus:outline-none">
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="text-gray-700 hover:text-red-600 focus:outline-none"
+              >
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  {isMobileMenuOpen ? (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  ) : (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  )}
                 </svg>
               </button>
             </div>
           </div>
+
+          {/* Mobile Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden border-t border-gray-200 py-4">
+              <div className="flex flex-col space-y-4">
+                {navItems.map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.href}
+                    className="text-gray-700 hover:text-red-600 transition-colors duration-200 font-medium px-4"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                ))}
+                <a
+                  href="/contact"
+                  className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors duration-200 font-medium mx-4 text-center"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Contact Us
+                </a>
+              </div>
+            </div>
+          )}
         </div>
       </header>
-
       {/* Main Content */}
       <main className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
